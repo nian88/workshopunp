@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_list.*
 import org.jetbrains.anko.ctx
 import org.jetbrains.anko.db.classParser
 import org.jetbrains.anko.db.select
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 class ListActivity : AppCompatActivity() {
@@ -28,7 +29,9 @@ class ListActivity : AppCompatActivity() {
         rv_biodata.layoutManager= LinearLayoutManager(this)
         rv_biodata.addItemDecoration(DividerItemDecoration(this,1))
         adapter = BiodataAdapter(dataBiodata,this){
-            toast(it.nama)
+           startActivity<EditActivity>(
+               "data" to it
+           )
         }
         loadData()
         rv_biodata.adapter = adapter
@@ -43,6 +46,11 @@ class ListActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
 
+    }
+
+    override fun onResume() {
+        loadData()
+        super.onResume()
     }
     override fun onBackPressed() {
         super.onBackPressed()

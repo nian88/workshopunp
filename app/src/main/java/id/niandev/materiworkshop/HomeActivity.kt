@@ -3,8 +3,8 @@ package id.niandev.materiworkshop
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import id.niandev.materiworkshop.anko.AnkoActivity
+import id.niandev.materiworkshop.dataserver.BarangActivity
 import id.niandev.materiworkshop.intent.IntentNoDataActivity
 import id.niandev.materiworkshop.permissionandlibrary.GlideActivity
 import id.niandev.materiworkshop.sharepreference.SharepreferenceActivity
@@ -38,6 +38,10 @@ class HomeActivity : AppCompatActivity() {
         }
         btn_sqlite.setOnClickListener {
             startActivity<FormSqliteActivity>()
+        }
+
+        btn_server.setOnClickListener {
+            startActivity<BarangActivity>()
         }
     }
 }

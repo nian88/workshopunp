@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sqllite.ListActivity"></activity>
+        <activity android:name=".dataserver.BarangActivity"></activity>
+        <activity android:name=".sqllite.EditActivity" />
+        <activity android:name=".sqllite.ListActivity" />
         <activity android:name=".sqllite.FormSqliteActivity" />
         <activity android:name=".anko.AnkoActivity" />
         <activity android:name=".permissionandlibrary.GlideActivity" />

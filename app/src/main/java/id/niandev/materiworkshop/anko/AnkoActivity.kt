@@ -11,7 +11,6 @@ class AnkoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_anko)
-        toast("Anko Toast")
         val nama = intent.getStringExtra("nama")
         longToast(nama)
     }
