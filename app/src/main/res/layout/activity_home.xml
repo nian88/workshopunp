@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".HomeActivity">
+
+    <Button
+        android:id="@+id/btn_intent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Intent" />
+
+    <Button
+        android:id="@+id/btn_sharepreference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sharepreference" />
+
+    <Button
+        android:id="@+id/btn_glide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Permission" />
+    <Button
+        android:id="@+id/btn_anko"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anko Library" />
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Database Sqlite" />
+</LinearLayout>
