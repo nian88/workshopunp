@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.MenuItem
 import id.niandev.materiworkshop.R
 import kotlinx.android.synthetic.main.activity_edit.*
+import org.jetbrains.anko.db.delete
 import org.jetbrains.anko.db.update
-import org.jetbrains.anko.makeCall
 import org.jetbrains.anko.toast
 
 class EditActivity : AppCompatActivity() {
@@ -23,6 +23,17 @@ class EditActivity : AppCompatActivity() {
         btn_EditSqlite.setOnClickListener {
             saveEdit()
         }
+        btn_DeleteSqlite.setOnClickListener {
+            deleteData()
+        }
+    }
+
+    private fun deleteData() {
+        database.use {
+            delete("pelajartable","id = {id}","id" to id)
+        }
+        toast("Data Telah diHapus")
+        onBackPressed()
     }
 
     private fun saveEdit() {
